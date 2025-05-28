@@ -7,19 +7,19 @@ export const App = () => {
   const [tasks, seTasks] = useState([
     {
       id: 1,
-      title: "estudar",
+      title: "Estudar programação",
       descripition: "Desenvolver",
       isCompleted: false,
     },
       {
       id: 2,
-      title: "estudar2",
+      title: "Estudar Inglês",
       descripition: "Desenvolver2",
       isCompleted: false,
     },
       {
       id: 3,
-      title: "estudar3",
+      title: "Estudar React",
       descripition: "Desenvolver3",
       isCompleted: false,
     },

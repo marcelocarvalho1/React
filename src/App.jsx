@@ -11,19 +11,30 @@ export const App = () => {
       descripition: "Desenvolver",
       isCompleted: false,
     },
-      {
+    {
       id: 2,
       title: "Estudar Inglês",
       descripition: "Desenvolver2",
       isCompleted: false,
     },
-      {
+    {
       id: 3,
       title: "Estudar React",
       descripition: "Desenvolver3",
       isCompleted: false,
     },
   ]);
+
+  function onTaskClick(taskId) {
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return { ...task, isCompleted: !task.isCompleted };
+      }
+      return task;
+    });
+
+    seTasks(newTasks);
+  }
 
   return (
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
@@ -33,7 +44,7 @@ export const App = () => {
           Gerenciador de Taferas
         </h1>
         <AddTask />
-        <Tasks tasks={tasks} />
+        <Tasks tasks={tasks} onTaskClick={onTaskClick}/>
       </div>
     </div>
   );

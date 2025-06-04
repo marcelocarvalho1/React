@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export const AddTask = ({ onAddTaskSubmit }) => {
   const [title, setTitle] = useState("");
@@ -19,8 +19,19 @@ export const AddTask = ({ onAddTaskSubmit }) => {
         placeholder="Digite a descrição da terefa"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-      />
-      <button className="bg-slate-500 text-white px-4 py-2 rounded-md " onClick={ ()=> onAddTaskSubmit(title, description)}>
+      /> 
+      <button
+        className="bg-slate-500 text-white px-4 py-2 rounded-md "
+        onClick={() => {
+          if(!title.trim() || !description.trim() ) {
+             return alert("Por favor, preencha todos os campos."); 
+
+          }
+          onAddTaskSubmit(title, description); 
+          setTitle("");
+          setDescription("");
+        }}
+      >
         Adicionar
       </button>
     </div>

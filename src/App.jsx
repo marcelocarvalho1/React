@@ -8,19 +8,19 @@ export const App = () => {
     {
       id: 1,
       title: "Estudar programação",
-      descripition: "Desenvolver",
+      description: "Desenvolver",
       isCompleted: false,
     },
     {
       id: 2,
       title: "Estudar Inglês",
-      descripition: "Desenvolver2",
+      description: "Desenvolver2",
       isCompleted: false,
     },
     {
       id: 3,
       title: "Estudar React",
-      descripition: "Desenvolver3",
+      description: "Desenvolver3",
       isCompleted: false,
     },
   ]);

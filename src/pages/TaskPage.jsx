@@ -1,11 +1,12 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { ChevronLeftIcon } from "lucide-react";
+import { Title } from "../components/Title";
 
 export const TaskPage = () => {
   const [searchParams] = useSearchParams();
   const title = searchParams.get("title");
   const description = searchParams.get("description");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
@@ -21,9 +22,7 @@ export const TaskPage = () => {
             </button>
           </div>
 
-          <h1 className="text-3xl text-slate-100 font-bold text-center">
-            Detalhes da tarefa
-          </h1>
+          <Title> Detalhe da Tarefe </Title>
         </div>
 
         <div className="bg-slate-200 p-4 rounded-md">
